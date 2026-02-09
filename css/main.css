@@ -2818,7 +2818,7 @@ img[name='cpps-logo.png'] {
 .section-title {
     font-size: clamp(26px, 3.2vw, 40px);
     margin: 0 0 8px;
-    text-align:center;
+    text-align: center;
 }
 
 .section-subtitle {
@@ -2861,6 +2861,7 @@ img[name='cpps-logo.png'] {
     border: 1px solid rgba(255, 255, 255, 0.12);
     color: #fff;
 }
+
 }
 
 /* optional subtle tier tint */
@@ -2888,7 +2889,6 @@ img[name='cpps-logo.png'] {
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
     /*padding: 0px;
     border-radius: 0;*/ /* kill card look */
-
     /*background: linear-gradient( to bottom, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.06) 35%, rgba(255, 255, 255, 0.02) 60%, rgba(255, 255, 255, 0.0) 100% );
     border-top: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);*/
@@ -2903,6 +2903,7 @@ img[name='cpps-logo.png'] {
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
 }
+
 .tier-other {
     padding: 0px;
     border-radius: 18px;
@@ -2942,34 +2943,38 @@ img[name='cpps-logo.png'] {
         /*background: rgba(255, 255, 255, 0.07);*/
     }
 
-    /* Keep logos crisp and centered */
-    .logo-card img {
-        width: auto;
-        height: 100%;
-        object-fit: contain;
-        padding: 0px;
-    }
+.logo-silver {
+    margin-bottom: 10px;
+}
 
-    .logo-gold img {
-        width: auto;
-        height: 80%;
-        object-fit: contain;
-        padding: 0px;
-    }
+/* Keep logos crisp and centered */
+.logo-card img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    padding: 0px;
+}
 
-    .logo-silver img {
-        width: auto;
-        height: 80%;
-        object-fit: contain;
-        padding: 0px;
-    }
+.logo-gold img {
+    width: auto;
+    height: 80%;
+    object-fit: contain;
+    padding: 0px;
+}
 
-    .logo-community img {
-        width: 100%;
-        height: 60%;
-        object-fit: contain;
-        padding: 5px;
-    }
+.logo-silver img {
+    width: auto;
+    height: 80%;
+    object-fit: contain;
+    padding: 0px;
+}
+
+.logo-community img {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+    padding: 5px;
+}
 
 /* ===== Proportional sizing by tier ===== */
 .logo-platinum {
