@@ -2910,6 +2910,8 @@ img[name='cpps-logo.png'] {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+    min-height: 600px;
+    padding-top: 10px;
 }
 
 .logo-grid {
@@ -2987,11 +2989,11 @@ img[name='cpps-logo.png'] {
 }
 
 .logo-silver {
-    height: clamp(105px, 14vw, 145px);
+    height: clamp(140px, 14vw, 145px);
 }
 
 .logo-community {
-    height: clamp(90px, 12vw, 120px);
+    height: clamp(120px, 12vw, 120px);
 }
 
 /* Responsive tweaks */
