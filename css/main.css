@@ -3009,3 +3009,174 @@ img[name='cpps-logo.png'] {
         grid-template-columns: 1fr;
     }
 }
+
+.sponsor-patch-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* vertical center */
+    justify-content: center; /* horizontal center */
+    text-align: center;
+    padding-top: 130px;
+    min-height: 480px;
+}
+
+    .sponsor-patch-inner.platinum-layout {
+        padding-top: 70px !important;
+    }
+
+    .sponsor-patch-inner.gold-layout {
+        padding-top: 70px !important;
+    }
+
+    .sponsor-patch-inner.silver-layout {
+        padding-left: 120px !important;
+        padding-right: 80px !important;
+    }
+
+    .sponsor-patch-inner.community-layout {
+        padding-top: 115px !important;
+        padding-left: 100px !important;
+        padding-right: 90px !important;
+    }
+
+.sponsor-patch-platinum {
+    background-image: url('../img/Platinum.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain; /* or 100% auto */
+    min-height: 420px;
+}
+
+.sponsor-logo-platinum img {
+    max-width: 55%;
+    max-height: auto;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.sponsor-patch-gold {
+    background-image: url('../img/Gold.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain; /* or 100% auto */
+    min-height: 420px;
+}
+
+.sponsor-logo-gold {
+    max-width: 40%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+    .sponsor-logo-gold img {
+        max-width: 75%;
+        max-height: auto;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+.sponsor-patch-silver {
+    background-image: url('../img/Silver.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain; /* or 100% auto */
+    min-height: 420px;
+    /*    padding-top: 150px;
+    padding-left: 180px;
+    padding-right: 150px;*/
+}
+
+.sponsor-logo-silver {
+    max-width: 55%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+    .sponsor-logo-silver img {
+        max-width: 55%;
+        max-height: auto;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+.sponsor-patch-community {
+    background-image: url('../img/Community.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain; /* or 100% auto */
+    min-height: 420px;
+    /*    padding-top: 160px;
+    padding-left: 180px;
+    padding-right: 150px;*/
+}
+
+.sponsor-logo-community img {
+    max-width: 55%;
+    max-height: auto;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Cellphones */
+@media (max-width: 915px) {
+    .sponsor-patch-inner {
+        min-height: 20vh;
+    }
+        .sponsor-patch-inner.platinum-layout {
+            padding-top: 170px !important;
+        }
+
+        .sponsor-patch-inner.gold-layout {
+            padding-top: 120px !important;
+        }
+
+        .sponsor-patch-inner.silver-layout {
+            padding-top: 150px !important;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+
+        .sponsor-patch-inner.community-layout {
+            padding-top: 150px !important;
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+}
+
+@media (max-width: 430px) {
+    .sponsor-patch-inner {
+        min-height: 20vh;
+    }
+
+        .sponsor-patch-inner.platinum-layout {
+            padding-top: 70px !important;
+        }
+
+        .sponsor-patch-inner.gold-layout {
+            padding-top: 70px !important;
+        }
+
+        .sponsor-patch-inner.silver-layout {
+            padding-top: 70px !important;
+        }
+
+        .sponsor-patch-inner.community-layout {
+            padding-top: 70px !important;
+        }
+
+    .sponsor-logo-community img {
+        max-width: 25%;
+        max-height: auto;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+}
