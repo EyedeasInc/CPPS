@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Register · Canadian Power Platform Summit 2027</title>
+    <meta name="description" content="Register for the Canadian Power Platform Summit 2027 — March 12–13 in Vancouver, BC. Main event and full-day workshop registration." />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --red: #d64a3f; --red-dark: #b0261f; --red-deep: #7c1a15;
+            --cream: #f1e1cf; --paper: #fbf6ef; --ink: #16110f; --ink-soft: #3a322d;
+            --line: rgba(22,17,15,.12); --shadow: 0 18px 50px -20px rgba(22,17,15,.35);
+            --maxw: 1100px; --ease: cubic-bezier(.2,.7,.2,1);
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; font-family: 'Inter', system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        .display { font-family: 'Anton', sans-serif; text-transform: uppercase; letter-spacing: .01em; font-weight: 400; }
+        .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+        .btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 999px; border: 2px solid transparent; transition: transform .25s var(--ease), background .25s; }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--red); color: #fff; }
+        .btn-primary:hover { background: var(--red-dark); }
+        .btn-ghost { color: #fff; border-color: rgba(255,255,255,.45); }
+        .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+        header.nav { background: rgba(18,13,11,.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 24px; max-width: var(--maxw); margin: 0 auto; }
+        .brand { display: flex; align-items: center; gap: 12px; }
+        .brand img { height: 48px; width: 48px; }
+        .brand-text b { font-family: 'Barlow Condensed', sans-serif; font-size: 19px; letter-spacing: .04em; text-transform: uppercase; color: #fff; display: block; line-height: 1; }
+        .brand-text span { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--cream); opacity: .8; }
+
+        .page-hero { background: linear-gradient(135deg, var(--red-deep), var(--red)); color: #fff; text-align: center; padding: 64px 0 56px; position: relative; overflow: hidden; }
+        .page-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 120% at 50% 0%, rgba(255,255,255,.18), transparent 60%); }
+        .page-hero .wrap { position: relative; }
+        .page-hero .kicker { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: .24em; font-weight: 600; color: var(--cream); margin-bottom: 12px; }
+        .page-hero h1 { font-size: clamp(38px, 6vw, 72px); }
+        .page-hero p { max-width: 56ch; margin: 16px auto 0; opacity: .92; }
+        .page-hero .meta { display: flex; gap: 12px 26px; justify-content: center; flex-wrap: wrap; margin-top: 22px; font-weight: 600; }
+
+        .reg-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 18px; margin: -36px auto 0; position: relative; z-index: 2; max-width: var(--maxw); }
+        .reg-note { text-align: center; color: var(--ink-soft); margin: 8px 0 18px; }
+        .reg-note a { color: var(--red); font-weight: 700; }
+        iframe#registrationForm { width: 100%; min-height: 900px; border: 0; border-radius: 12px; overflow: hidden; }
+
+        footer.site { background: var(--ink); color: rgba(255,255,255,.72); padding: 54px 0 30px; margin-top: 70px; }
+        .foot-grid { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; align-items: center; }
+        .foot-brand { display: flex; align-items: center; gap: 14px; }
+        .foot-brand img { height: 54px; width: 54px; }
+        .foot-brand b { color: #fff; font-family: 'Barlow Condensed', sans-serif; letter-spacing: .06em; text-transform: uppercase; }
+        .socials { display: flex; gap: 12px; }
+        .socials a { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); display: grid; place-items: center; transition: .25s var(--ease); }
+        .socials a:hover { background: var(--red); border-color: var(--red); transform: translateY(-3px); }
+        .socials svg { width: 17px; height: 17px; fill: #fff; }
+        .foot-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 30px; padding-top: 20px; font-size: 13px; text-align: center; }
+        @media (max-width: 560px) { .brand-text { display: none; } }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <div class="nav-inner">
+            <a class="brand" href="index.html">
+                <img src="img/CPPS-Logo-Light.png" alt="Canadian Power Platform Summit" />
+                <span class="brand-text"><b>Canadian Summit</b><span>Power Platform</span></span>
+            </a>
+            <a class="btn btn-ghost" href="index.html">← Back to Home</a>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="wrap">
+            <p class="kicker">The True North Power Platform Experience</p>
+            <h1 class="display">Register for CPPS 2027</h1>
+            <p>Secure your spot at the Canadian Power Platform Summit — two days of sessions, workshops, and epic networking in beautiful Vancouver.</p>
+            <div class="meta">
+                <span>🗓 March 12–13, 2027</span>
+                <span>📍 Vancouver, BC</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="wrap">
+        <div class="reg-card">
+            <p class="reg-note">Use the form below for main event and workshop registration.</p>
+            <iframe id="registrationForm" title="CPPS 2027 registration form"
+                    src="https://dhino-eventstore-canadian.netlify.app/events/CS26"></iframe>
+        </div>
+    </div>
+
+    <footer class="site">
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="img/CPPS-Logo-Light.png" alt="" />
+                    <div><b>Canadian Power Platform Summit</b><br /><span style="font-size:13px">info@canadianpowerplatformsummit.com</span></div>
+                </div>
+                <div class="socials">
+                    <a href="https://x.com/canadiansummit" target="_blank" rel="noopener" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93zm-1.29 19.5h2.04L6.48 3.24H4.29l13.32 17.41z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/canadian-power-platform-summit/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 21 11.1 21 14.28V21h-4v-5.95c0-1.42-.02-3.25-1.98-3.25-1.98 0-2.28 1.55-2.28 3.15V21H9z"/></svg></a>
+                    <a href="https://www.youtube.com/@CanadianPowerPlatformSummit" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.4.5A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.5.5-5.5s0-3.6-.5-5.5zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
+                </div>
+            </div>
+            <div class="foot-bottom">© <span id="year"></span> Canadian Power Platform Summit · A non-profit community event · The True North Power Platform Experience 🍁</div>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

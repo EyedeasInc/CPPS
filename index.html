@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Canadian Power Platform Summit 2027 · March 12–13 · Vancouver</title>
+    <meta name="description" content="The Canadian Power Platform Summit (CPPS) returns March 12–13, 2027 in Vancouver, BC. A celebration of innovation, collaboration, and all things Power Platform — eh! The Call for Speakers is now open." />
+    <meta name="keywords" content="Power Platform, CPPS, Canadian Power Platform Summit, Power Apps, Power Automate, Copilot Studio, Dataverse, Vancouver, Microsoft, conference 2027" />
+    <meta name="author" content="Canadian Power Platform Summit" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Canadian Power Platform Summit 2027" />
+    <meta property="og:description" content="The True North Power Platform Experience — March 12–13, 2027 · Vancouver, BC." />
+    <meta property="og:image" content="img/hero.jpg" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --red: #d64a3f;
+            --red-dark: #b0261f;
+            --red-deep: #7c1a15;
+            --cream: #f1e1cf;
+            --paper: #fbf6ef;
+            --ink: #16110f;
+            --ink-soft: #3a322d;
+            --navy: #2a3757;
+            --line: rgba(22, 17, 15, .12);
+            --shadow: 0 18px 50px -20px rgba(22, 17, 15, .35);
+            --maxw: 1200px;
+            --radius: 18px;
+            --ease: cubic-bezier(.2, .7, .2, 1);
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--ink);
+            background: var(--paper);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { line-height: 1.05; margin: 0; }
+
+        .display {
+            font-family: 'Anton', 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .01em;
+            font-weight: 400;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        img { max-width: 100%; display: block; }
+
+        .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+        .eyebrow {
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .22em;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--red);
+        }
+
+        .section { padding: clamp(64px, 9vw, 120px) 0; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: .02em;
+            padding: 15px 30px;
+            border-radius: 999px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s, color .25s;
+            white-space: nowrap;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--red); color: #fff; box-shadow: 0 12px 28px -12px rgba(214, 74, 63, .9); }
+        .btn-primary:hover { background: var(--red-dark); }
+        .btn-ghost { background: transparent; color: var(--ink); border-color: rgba(22, 17, 15, .25); }
+        .btn-ghost:hover { border-color: var(--ink); }
+        .btn-ghost.on-dark { color: #fff; border-color: rgba(255, 255, 255, .45); }
+        .btn-ghost.on-dark:hover { border-color: #fff; background: rgba(255, 255, 255, .08); }
+
+        /* ---------- Announcement bar ---------- */
+        .announce {
+            background: var(--red-deep);
+            color: var(--cream);
+            font-size: 13.5px;
+            letter-spacing: .02em;
+            text-align: center;
+            padding: 9px 16px;
+        }
+        .announce strong { color: #fff; font-weight: 700; }
+        .announce a { text-decoration: underline; text-underline-offset: 3px; font-weight: 700; color: #fff; }
+
+        /* ---------- Nav ---------- */
+        header.nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(20, 15, 13, .0);
+            transition: background .35s var(--ease), box-shadow .35s var(--ease);
+        }
+        header.nav.solid {
+            background: rgba(18, 13, 11, .92);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .8);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 14px 24px;
+            max-width: var(--maxw);
+            margin: 0 auto;
+        }
+        .brand { display: flex; align-items: center; gap: 12px; }
+        .brand img { height: 52px; width: 52px; }
+        .brand-text { color: #fff; line-height: 1; }
+        .brand-text b { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; letter-spacing: .04em; text-transform: uppercase; display: block; }
+        .brand-text span { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--cream); opacity: .8; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+        .nav-links a { color: rgba(255, 255, 255, .85); font-weight: 600; font-size: 14.5px; letter-spacing: .01em; transition: color .2s; }
+        .nav-links a:hover { color: #fff; }
+        .nav-cta { display: flex; align-items: center; gap: 14px; }
+        .menu-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
+        .menu-toggle span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            margin-top: -84px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute; inset: 0;
+            background: url('img/hero.jpg') center 30% / cover no-repeat;
+            transform: scale(1.05);
+        }
+        .hero-bg::after {
+            content: "";
+            position: absolute; inset: 0;
+            background:
+                linear-gradient(90deg, rgba(16, 11, 9, .88) 0%, rgba(16, 11, 9, .58) 42%, rgba(16, 11, 9, .18) 100%),
+                linear-gradient(180deg, rgba(16, 11, 9, .38) 0%, rgba(16, 11, 9, .12) 45%, rgba(16, 11, 9, .78) 100%),
+                radial-gradient(120% 90% at 80% 8%, rgba(124, 26, 21, .28), transparent 55%);
+        }
+        .hero-inner { position: relative; z-index: 2; padding: 130px 0 90px; max-width: var(--maxw); margin: 0 auto; width: 100%; padding-left: 24px; padding-right: 24px; }
+        .hero .kicker {
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .26em;
+            font-weight: 600;
+            font-size: clamp(14px, 1.6vw, 18px);
+            color: var(--cream);
+            margin-bottom: 14px;
+        }
+        .hero h1 {
+            font-size: clamp(46px, 8.5vw, 118px);
+            max-width: 14ch;
+            text-shadow: 0 6px 30px rgba(0, 0, 0, .35);
+        }
+        .hero h1 .accent { color: var(--red); }
+        .hero-meta {
+            display: flex; flex-wrap: wrap; gap: 12px 28px;
+            margin: 26px 0 8px;
+            font-size: 16px; font-weight: 600;
+        }
+        .hero-meta span { display: inline-flex; align-items: center; gap: 9px; }
+        .hero-meta svg { width: 19px; height: 19px; stroke: var(--red); flex: none; }
+        .hero-lede { max-width: 56ch; color: rgba(255, 255, 255, .9); font-size: 17px; margin: 18px 0 30px; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+        /* Countdown */
+        .countdown { display: flex; gap: 14px; margin-top: 40px; }
+        .cd-box {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .16);
+            backdrop-filter: blur(6px);
+            border-radius: 14px;
+            padding: 14px 8px;
+            min-width: 78px;
+            text-align: center;
+        }
+        .cd-box b { font-family: 'Anton', sans-serif; font-size: 34px; display: block; line-height: 1; }
+        .cd-box span { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; opacity: .75; }
+        .cd-live { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; letter-spacing: .08em; text-transform: uppercase; margin-top: 36px; color: var(--cream); }
+
+        /* ---------- Marquee ---------- */
+        .marquee {
+            background: var(--red);
+            color: #fff;
+            overflow: hidden;
+            padding: 16px 0;
+            border-top: 3px solid var(--red-deep);
+            border-bottom: 3px solid var(--red-deep);
+        }
+        .marquee-track {
+            display: flex; gap: 40px; width: max-content;
+            animation: scroll 32s linear infinite;
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase; letter-spacing: .1em; font-weight: 600; font-size: 22px;
+        }
+        .marquee-track span { display: inline-flex; align-items: center; gap: 40px; }
+        .marquee-track span::after { content: "✦"; color: var(--cream); font-size: 15px; }
+        @keyframes scroll { to { transform: translateX(-50%); } }
+
+        /* ---------- Stats ---------- */
+        .stats { background: var(--ink); color: var(--cream); }
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;
+            text-align: center;
+        }
+        .stat b { font-family: 'Anton', sans-serif; font-size: clamp(34px, 4.4vw, 56px); color: #fff; display: block; line-height: 1; }
+        .stat b .u { color: var(--red); }
+        .stat span { font-size: 13px; letter-spacing: .04em; opacity: .78; margin-top: 8px; display: block; }
+
+        /* ---------- Section heading ---------- */
+        .head { max-width: 720px; margin-bottom: 52px; }
+        .head.center { margin-left: auto; margin-right: auto; text-align: center; }
+        .head h2 { font-size: clamp(34px, 5vw, 60px); margin-top: 12px; }
+        .head p { color: var(--ink-soft); font-size: 17px; margin-top: 16px; }
+
+        /* ---------- About ---------- */
+        .about-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+        .about-media { position: relative; }
+        .about-media img { border-radius: var(--radius); box-shadow: var(--shadow); aspect-ratio: 4/5; object-fit: cover; width: 100%; }
+        .about-tag {
+            position: absolute; bottom: -22px; left: -22px;
+            background: var(--red); color: #fff;
+            border-radius: 14px; padding: 18px 22px;
+            box-shadow: var(--shadow); max-width: 220px;
+        }
+        .about-tag b { font-family: 'Anton', sans-serif; font-size: 30px; display: block; line-height: 1; }
+        .about-tag span { font-size: 13px; opacity: .9; }
+        .about-body p { color: var(--ink-soft); margin: 0 0 18px; }
+        .about-body p strong { color: var(--ink); }
+        .pill {
+            display: inline-block; background: var(--cream); color: var(--red-deep);
+            font-weight: 700; font-size: 13px; letter-spacing: .04em;
+            padding: 6px 14px; border-radius: 999px; margin-bottom: 22px;
+        }
+
+        /* ---------- Feature cards ---------- */
+        .features { background: var(--cream); }
+        .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+        .card {
+            background: var(--paper); border-radius: var(--radius); padding: 30px 26px;
+            border: 1px solid var(--line); transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+        }
+        .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+        .card .ic {
+            width: 54px; height: 54px; border-radius: 14px; background: var(--red);
+            display: grid; place-items: center; margin-bottom: 20px;
+        }
+        .card .ic svg { width: 26px; height: 26px; stroke: #fff; }
+        .card h3 { font-size: 21px; margin-bottom: 10px; }
+        .card p { color: var(--ink-soft); font-size: 15px; margin: 0; }
+
+        /* ---------- Agenda ---------- */
+        .agenda-frame { background: #fff; border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); border: 1px solid var(--line); overflow-x: auto; }
+        .agenda-tba {
+            text-align: center; padding: 72px 28px;
+            background: linear-gradient(180deg, var(--cream), #fff);
+            border: 1px dashed rgba(214, 74, 63, .4);
+        }
+        .agenda-tba .tba-badge {
+            display: inline-block; background: var(--red); color: #fff; font-weight: 700;
+            font-size: 13px; letter-spacing: .04em; padding: 7px 16px; border-radius: 999px; margin-bottom: 20px;
+        }
+        .agenda-tba h3 { font-size: clamp(32px, 5vw, 54px); color: var(--red-deep); margin-bottom: 14px; }
+        .agenda-tba p { color: var(--ink-soft); max-width: 48ch; margin: 0 auto; font-size: 16px; }
+        .agenda-cta { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 34px; }
+
+        /* ---------- Gallery ---------- */
+        .gallery { background: var(--ink); }
+        .gallery .head h2, .gallery .head .eyebrow { color: #fff; }
+        .gallery .head .eyebrow { color: var(--red); }
+        .gallery .head p { color: rgba(255, 255, 255, .7); }
+        .gal-grid { column-count: 4; column-gap: 14px; }
+        .gal-grid a {
+            display: block; margin: 0 0 14px; border-radius: 14px; overflow: hidden;
+            position: relative; break-inside: avoid; cursor: zoom-in; background: #241d1a;
+        }
+        .gal-grid img { width: 100%; height: auto; display: block; transition: transform .6s var(--ease); }
+        .gal-grid a:hover img { transform: scale(1.06); }
+        .gal-grid a::after {
+            content: ""; position: absolute; inset: 0; opacity: 0; transition: opacity .3s var(--ease);
+            background:
+                linear-gradient(0deg, rgba(20, 15, 13, .45), transparent 55%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35M11 8v6M8 11h6'/%3E%3C/svg%3E") no-repeat center;
+        }
+        .gal-grid a:hover::after { opacity: 1; }
+        @media (max-width: 980px) { .gal-grid { column-count: 3; } }
+        @media (max-width: 640px) { .gal-grid { column-count: 2; } }
+
+        /* ---------- Lightbox ---------- */
+        .lb { position: fixed; inset: 0; z-index: 1000; display: none; }
+        .lb.open { display: block; }
+        .lb-backdrop { position: absolute; inset: 0; background: rgba(11, 8, 7, .93); backdrop-filter: blur(6px); }
+        .lb-stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 5vh 6vw; }
+        .lb-figure { position: relative; max-width: 100%; max-height: 100%; text-align: center; }
+        .lb-img {
+            max-width: 100%; max-height: 82vh; width: auto; height: auto;
+            border-radius: 12px; box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .8);
+            opacity: 0; transform: scale(.97); transition: opacity .35s var(--ease), transform .35s var(--ease);
+        }
+        .lb-img.ready { opacity: 1; transform: none; }
+        .lb-cap { color: rgba(255, 255, 255, .78); font-size: 13px; letter-spacing: .04em; margin-top: 14px; }
+        .lb-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .25);
+            background: rgba(255, 255, 255, .08); color: #fff; cursor: pointer; z-index: 2;
+            display: grid; place-items: center; transition: background .2s, transform .2s var(--ease);
+        }
+        .lb-btn:hover { background: var(--red); border-color: var(--red); }
+        .lb-btn svg { width: 26px; height: 26px; stroke: #fff; fill: none; stroke-width: 2.2; }
+        .lb-prev { left: 3vw; }
+        .lb-next { right: 3vw; }
+        .lb-close {
+            position: absolute; top: 22px; right: 26px; width: 48px; height: 48px; border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, .25); background: rgba(255, 255, 255, .08); color: #fff;
+            cursor: pointer; z-index: 3; display: grid; place-items: center; transition: background .2s, transform .2s var(--ease);
+        }
+        .lb-close:hover { background: var(--red); border-color: var(--red); transform: rotate(90deg); }
+        .lb-close svg { width: 24px; height: 24px; stroke: #fff; stroke-width: 2.2; }
+        .lb-count {
+            position: absolute; top: 30px; left: 26px; z-index: 3; color: rgba(255, 255, 255, .85);
+            font-family: 'Barlow Condensed', sans-serif; letter-spacing: .14em; font-size: 16px; text-transform: uppercase;
+        }
+        @media (max-width: 640px) {
+            .lb-btn { width: 46px; height: 46px; }
+            .lb-prev { left: 8px; } .lb-next { right: 8px; }
+            .lb-stage { padding: 8vh 12px; }
+        }
+
+        /* ---------- Sponsors ---------- */
+        .tier { margin-bottom: 46px; text-align: center; }
+        .tier-label {
+            font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase;
+            letter-spacing: .2em; font-weight: 700; font-size: 15px;
+            color: var(--ink-soft); margin-bottom: 22px;
+            display: inline-flex; align-items: center; gap: 14px;
+        }
+        .tier-label::before, .tier-label::after { content: ""; width: 40px; height: 2px; background: var(--red); opacity: .5; }
+        .logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 22px; }
+        .logo-slot {
+            background: #fff; border: 1px solid var(--line); border-radius: 14px;
+            display: grid; place-items: center; padding: 20px 28px;
+            transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+        }
+        .logo-slot:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .logo-slot img { max-height: 100%; object-fit: contain; }
+        .tier-platinum .logo-slot { height: 130px; min-width: 300px; }
+        .tier-platinum .logo-slot img { max-height: 70px; }
+        .tier-gold .logo-slot { height: 110px; min-width: 240px; }
+        .tier-gold .logo-slot img { max-height: 58px; }
+        .tier-silver .logo-slot { height: 96px; min-width: 200px; }
+        .tier-silver .logo-slot img { max-height: 48px; }
+        .tier-community .logo-slot { height: 82px; min-width: 160px; }
+        .tier-community .logo-slot img { max-height: 42px; }
+        .sponsor-cta { text-align: center; margin-top: 24px; }
+        .sponsor-panel {
+            text-align: center; max-width: 780px; margin: 0 auto; padding: 60px 32px;
+            background: linear-gradient(180deg, var(--cream), #fff);
+            border: 1px dashed rgba(214, 74, 63, .4); border-radius: var(--radius); box-shadow: var(--shadow);
+        }
+        .sponsor-panel .tba-badge {
+            display: inline-block; background: var(--red); color: #fff; font-weight: 700;
+            font-size: 13px; letter-spacing: .04em; padding: 7px 16px; border-radius: 999px; margin-bottom: 20px;
+        }
+        .sponsor-panel h3 { font-size: clamp(28px, 4.4vw, 46px); color: var(--red-deep); margin-bottom: 14px; }
+        .sponsor-panel > p { color: var(--ink-soft); max-width: 52ch; margin: 0 auto 26px; font-size: 16px; }
+        .sponsor-panel .btn { font-size: 16px; }
+        .sponsor-fineprint { font-size: 14px; color: var(--ink-soft); margin: 20px 0 0; }
+
+        /* ---------- Venue ---------- */
+        .venue { background: var(--cream); }
+        .venue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; }
+        .venue-info h2 { font-size: clamp(30px, 4.4vw, 52px); margin: 12px 0 20px; }
+        .venue-list { list-style: none; padding: 0; margin: 26px 0 30px; display: grid; gap: 16px; }
+        .venue-list li { display: flex; gap: 14px; align-items: flex-start; }
+        .venue-list .vic { width: 42px; height: 42px; flex: none; border-radius: 11px; background: #fff; border: 1px solid var(--line); display: grid; place-items: center; }
+        .venue-list .vic svg { width: 20px; height: 20px; stroke: var(--red); }
+        .venue-list b { display: block; font-size: 15px; }
+        .venue-list span { color: var(--ink-soft); font-size: 14.5px; }
+        .venue-map { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); }
+        .venue-map iframe { display: block; width: 100%; height: 420px; border: 0; }
+        .venue-tbc {
+            position: absolute; top: 16px; left: 16px; z-index: 2;
+            background: var(--red); color: #fff; font-weight: 700; font-size: 13px;
+            letter-spacing: .02em; padding: 8px 16px; border-radius: 999px;
+            box-shadow: 0 8px 20px -8px rgba(214, 74, 63, .9);
+        }
+
+        /* ---------- FAQ ---------- */
+        .faq-list { max-width: 820px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--line); }
+        .faq-q {
+            width: 100%; background: none; border: 0; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center; gap: 20px;
+            padding: 24px 4px; text-align: left;
+            font-family: 'Inter', sans-serif; font-weight: 700; font-size: 18px; color: var(--ink);
+        }
+        .faq-q .plus { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--cream); color: var(--red-deep); display: grid; place-items: center; font-size: 20px; transition: .3s var(--ease); }
+        .faq-item.open .plus { background: var(--red); color: #fff; transform: rotate(45deg); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease); }
+        .faq-a p { color: var(--ink-soft); padding: 0 4px 24px; margin: 0; }
+
+        /* ---------- CTA band ---------- */
+        .cta-band {
+            position: relative; color: #fff; text-align: center; overflow: hidden;
+            background: linear-gradient(135deg, var(--red-deep), var(--red));
+        }
+        .cta-band::before {
+            content: ""; position: absolute; inset: 0;
+            background: radial-gradient(60% 120% at 50% 0%, rgba(255, 255, 255, .18), transparent 60%);
+        }
+        .cta-band .wrap { position: relative; }
+        .cta-band h2 { font-size: clamp(36px, 6vw, 76px); }
+        .cta-band p { max-width: 52ch; margin: 18px auto 32px; opacity: .92; font-size: 18px; }
+        .cta-band .btn-primary { background: #fff; color: var(--red-deep); }
+        .cta-band .btn-primary:hover { background: var(--cream); }
+
+        /* ---------- Footer ---------- */
+        footer.site {
+            background: var(--ink); color: rgba(255, 255, 255, .72);
+            padding: 70px 0 34px;
+        }
+        .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 44px; }
+        .foot-brand img { height: 66px; width: 66px; margin-bottom: 18px; }
+        .foot-brand p { font-size: 14.5px; max-width: 42ch; }
+        footer.site h4 { color: #fff; font-family: 'Barlow Condensed', sans-serif; letter-spacing: .12em; text-transform: uppercase; font-size: 16px; margin-bottom: 18px; }
+        .foot-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 11px; }
+        .foot-links a { font-size: 14.5px; transition: color .2s; }
+        .foot-links a:hover { color: var(--red); }
+        .socials { display: flex; gap: 12px; margin-top: 6px; }
+        .socials a { width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .18); display: grid; place-items: center; transition: .25s var(--ease); }
+        .socials a:hover { background: var(--red); border-color: var(--red); transform: translateY(-3px); }
+        .socials svg { width: 18px; height: 18px; fill: #fff; }
+        .foot-bottom { border-top: 1px solid rgba(255, 255, 255, .1); margin-top: 46px; padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+
+        /* ---------- Reveal ---------- */
+        .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+        .reveal.in { opacity: 1; transform: none; }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 980px) {
+            .about-grid, .venue-grid { grid-template-columns: 1fr; gap: 40px; }
+            .cards { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 26px; }
+            .foot-grid { grid-template-columns: 1fr 1fr; }
+            .about-media { max-width: 460px; }
+        }
+        @media (max-width: 760px) {
+            .nav-links, .nav-cta .btn-ghost { display: none; }
+            .menu-toggle { display: block; }
+            .nav-links.open {
+                display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(18, 13, 11, .98); padding: 20px 24px; gap: 18px; align-items: flex-start;
+            }
+            .gal-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+            .gal-grid .wide { grid-column: span 2; }
+            .foot-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: clamp(40px, 12vw, 64px); }
+            .countdown { flex-wrap: wrap; }
+        }
+        @media (max-width: 460px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .cards { grid-template-columns: 1fr; }
+            .cd-box { min-width: 66px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Announcement -->
+    <div class="announce">
+        🍁 <strong>CPPS 2027</strong> — March 12–13, 2027 · Vancouver, BC · Right before the Microsoft MVP Summit.
+        <a href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to speak →</a>
+    </div>
+
+    <!-- Nav -->
+    <header class="nav" id="nav">
+        <div class="nav-inner">
+            <a class="brand" href="#home" aria-label="Canadian Power Platform Summit home">
+                <img src="img/CPPS-Logo-Light.png" alt="Canadian Power Platform Summit logo" />
+                <span class="brand-text">
+                    <b>Canadian Summit</b>
+                    <span>Power Platform</span>
+                </span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#agenda">Agenda</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#sponsors">Sponsors</a>
+                <a href="#venue">Venue</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <div class="nav-cta">
+                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-inner">
+            <p class="kicker">The True North Power Platform Experience</p>
+            <h1 class="display">Canadian Power<br />Platform <span class="accent">Summit</span></h1>
+
+            <div class="hero-meta">
+                <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                    March 12–13, 2027
+                </span>
+                <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    Vancouver, BC
+                </span>
+                <span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                    250+ Attendees
+                </span>
+            </div>
+
+            <p class="hero-lede">
+                CPPS is a celebration of innovation, collaboration, and all things Power Platform, eh! Join Power Platform
+                enthusiasts from across the country and around the world for a one-of-a-kind event in the beautiful city of Vancouver.
+            </p>
+
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak at CPPS</a>
+                <a class="btn btn-ghost on-dark" href="#agenda">Explore the Agenda</a>
+            </div>
+
+            <div class="countdown" id="countdown" aria-label="Countdown to CPPS 2027">
+                <div class="cd-box"><b id="cd-days">00</b><span>Days</span></div>
+                <div class="cd-box"><b id="cd-hours">00</b><span>Hours</span></div>
+                <div class="cd-box"><b id="cd-mins">00</b><span>Minutes</span></div>
+                <div class="cd-box"><b id="cd-secs">00</b><span>Seconds</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Power Apps</span><span>Power Automate</span><span>Copilot Studio</span><span>Dataverse</span><span>Power BI</span><span>Power Pages</span><span>AI &amp; Agents</span>
+            <span>Power Apps</span><span>Power Automate</span><span>Copilot Studio</span><span>Dataverse</span><span>Power BI</span><span>Power Pages</span><span>AI &amp; Agents</span>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <section class="stats section">
+        <div class="wrap">
+            <div class="stats-grid">
+                <div class="stat reveal"><b data-count="250">0</b><span>Attendees</span></div>
+                <div class="stat reveal"><b data-count="56">0</b><span>Countries</span></div>
+                <div class="stat reveal"><b data-count="30">0</b><span>Speakers</span></div>
+                <div class="stat reveal"><b data-count="20">0</b><span>Sessions</span></div>
+                <div class="stat reveal"><b data-count="5">0</b><span>Workshops</span></div>
+                <div class="stat reveal"><b data-count="25">0</b><span>Sponsors</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="wrap about-grid">
+            <div class="about-media reveal">
+                <img src="img/about.jpg" alt="The Canadian Power Platform Summit organizing team" />
+                <div class="about-tag">
+                    <b>Non-Profit</b>
+                    <span>Community-driven &amp; built for everyone</span>
+                </div>
+            </div>
+            <div class="about-body reveal">
+                <span class="pill">🍁 About CPPS</span>
+                <p class="eyebrow">Empowering Canada's Power Platform community</p>
+                <div class="head" style="margin-bottom:22px;">
+                    <h2 class="display">A celebration of the Power Platform</h2>
+                </div>
+                <p>
+                    At the Canadian Power Platform Summit, our mission is to empower individuals and organizations through the
+                    innovative use of Microsoft's Power Platform. As a <strong>non-profit</strong>, we create an inclusive,
+                    collaborative environment where attendees learn, share, and grow their skills.
+                </p>
+                <p>
+                    Our inaugural summit was an absolute hit — a fantastic turnout of attendees from across Canada and beyond
+                    dove into insightful sessions, hands-on workshops, and epic networking, guided by expert speakers who made
+                    every session educational and inspiring.
+                </p>
+                <p>
+                    Building on that success, we're even more pumped for the next one. Set for <strong>March 12–13, 2027</strong> —
+                    right before the Microsoft MVP Summit — we're welcoming top-notch international speakers for another
+                    unforgettable experience in beautiful Vancouver.
+                </p>
+                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener" style="margin-top:12px;">Apply to Speak at CPPS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Features -->
+    <section class="section features" id="experience">
+        <div class="wrap">
+            <div class="head center reveal">
+                <p class="eyebrow">What to expect</p>
+                <h2 class="display">Two days of learning, building &amp; connecting</h2>
+                <p>A dynamic mix of expert-led sessions, hands-on workshops, and world-class networking — designed for every skill level.</p>
+            </div>
+            <div class="cards">
+                <div class="card reveal">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+                    <h3>Expert Sessions</h3>
+                    <p>Learn from international speakers and MVPs across Power Apps, Automate, Copilot Studio, Dataverse, and more.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    <h3>Hands-on Workshops</h3>
+                    <p>Full-day, deep-dive workshops that build real, practical skills you can take straight back to work.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>Epic Networking</h3>
+                    <p>Connect with enthusiasts, experts, and innovators from across the country and around the globe.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                    <h3>True North Community</h3>
+                    <p>A welcoming, inclusive celebration of innovation and collaboration — with a whole lot of Canadian spirit, eh!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agenda -->
+    <section class="section" id="agenda">
+        <div class="wrap">
+            <div class="head center reveal">
+                <p class="eyebrow">Sessions &amp; Schedule</p>
+                <h2 class="display">The CPPS 2027 Agenda</h2>
+                <p>Two days of expert-led sessions and hands-on workshops. The full schedule is being crafted — stay tuned!</p>
+            </div>
+            <div class="agenda-frame agenda-tba reveal">
+                <span class="tba-badge">🍁 Coming Soon</span>
+                <h3 class="display">To Be Announced</h3>
+                <p>The CPPS 2027 session and workshop lineup will be published closer to the event. Want to be on stage? Submit your session — the Call for Speakers is open!</p>
+            </div>
+            <div class="agenda-cta">
+                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak at CPPS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery" id="gallery">
+        <div class="wrap">
+            <div class="head center reveal">
+                <p class="eyebrow">Highlights</p>
+                <h2 class="display">Moments from the Summit</h2>
+                <p>A glimpse of the energy, connection, and Canadian flannel that make CPPS unforgettable.</p>
+            </div>
+            <div class="gal-grid reveal" id="galGrid">
+                <a href="img/gallery-010.jpg"><img src="img/gallery-010.jpg" alt="Attendees taking in the Vancouver skyline at CPPS" loading="lazy" /></a>
+                <a href="img/gallery-030.jpg"><img src="img/gallery-030.jpg" alt="Speaker presenting at CPPS" loading="lazy" /></a>
+                <a href="img/gallery-005.jpg"><img src="img/gallery-005.jpg" alt="CPPS session audience" loading="lazy" /></a>
+                <a href="img/gallery-055.jpg"><img src="img/gallery-055.jpg" alt="Attendees listening to a CPPS session" loading="lazy" /></a>
+                <a href="img/gallery-015.jpg"><img src="img/gallery-015.jpg" alt="CPPS organizers by the Canadian Summit banner" loading="lazy" /></a>
+                <a href="img/gallery-070.jpg"><img src="img/gallery-070.jpg" alt="Networking at CPPS" loading="lazy" /></a>
+                <a href="img/gallery-040.jpg"><img src="img/gallery-040.jpg" alt="CPPS workshop in progress" loading="lazy" /></a>
+                <a href="img/gallery-085.jpg"><img src="img/gallery-085.jpg" alt="CPPS attendees in Canadian flannel" loading="lazy" /></a>
+                <a href="img/gallery-060.jpg"><img src="img/gallery-060.jpg" alt="Conversation at CPPS" loading="lazy" /></a>
+                <a href="img/gallery-100.jpg"><img src="img/gallery-100.jpg" alt="CPPS community moment" loading="lazy" /></a>
+                <a href="img/gallery-075.jpg"><img src="img/gallery-075.jpg" alt="CPPS session room" loading="lazy" /></a>
+                <a href="img/gallery-090.jpg"><img src="img/gallery-090.jpg" alt="Attendees connecting at CPPS" loading="lazy" /></a>
+                <a href="img/gallery-120.jpg"><img src="img/gallery-120.jpg" alt="The CPPS crowd" loading="lazy" /></a>
+                <a href="img/gallery-115.jpg"><img src="img/gallery-115.jpg" alt="CPPS attendee" loading="lazy" /></a>
+                <a href="img/gallery-135.jpg"><img src="img/gallery-135.jpg" alt="CPPS speaker session" loading="lazy" /></a>
+                <a href="img/gallery-140.jpg"><img src="img/gallery-140.jpg" alt="Celebrating at CPPS" loading="lazy" /></a>
+                <a href="img/gallery-095.jpg"><img src="img/gallery-095.jpg" alt="CPPS session moment" loading="lazy" /></a>
+                <a href="img/gallery-098.jpg"><img src="img/gallery-098.jpg" alt="Attendees at CPPS" loading="lazy" /></a>
+                <a href="img/gallery-128.jpg"><img src="img/gallery-128.jpg" alt="CPPS community gathering" loading="lazy" /></a>
+                <a href="img/gallery-133.jpg"><img src="img/gallery-133.jpg" alt="On stage at CPPS" loading="lazy" /></a>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery">
+            <div class="lb-backdrop" data-close></div>
+            <div class="lb-count" id="lbCount">1 / 20</div>
+            <button class="lb-close" id="lbClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+            <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+            <div class="lb-stage" data-close>
+                <figure class="lb-figure">
+                    <img class="lb-img" id="lbImg" src="" alt="" />
+                    <figcaption class="lb-cap" id="lbCap"></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section class="section" id="sponsors">
+        <div class="wrap">
+            <div class="head center reveal">
+                <p class="eyebrow">Partner with us</p>
+                <h2 class="display">Sponsor CPPS 2027</h2>
+                <p>Sponsorship opportunities are now open — put your brand in front of Canada's most engaged Power Platform community.</p>
+            </div>
+
+            <div class="sponsor-panel reveal">
+                <p>From community supporter to headline partner, there's a package to fit your goals. Reach out for the prospectus and available tiers.</p>
+                <a class="btn btn-primary" href="mailto:sponsors@canadianpowerplatformsummit.com?subject=CPPS%202027%20Sponsorship">sponsors@canadianpowerplatformsummit.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue -->
+    <section class="section venue" id="venue">
+        <div class="wrap venue-grid">
+            <div class="venue-info reveal">
+                <p class="eyebrow">Where it happens</p>
+                <h2 class="display">Vancouver, BC 🇨🇦</h2>
+                <p style="color:var(--ink-soft)">
+                    CPPS 2027 is coming back to beautiful <strong>Vancouver, British Columbia</strong> — a city known for its
+                    stunning natural scenery, diverse culture, and thriving tech scene. The exact venue is being finalized
+                    and will be announced soon, but the destination is locked in.
+                </p>
+                <ul class="venue-list">
+                    <li>
+                        <span class="vic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+                        <div><b>Vancouver, British Columbia</b><span>Downtown venue — to be confirmed</span></div>
+                    </li>
+                    <li>
+                        <span class="vic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                        <div><b>March 12–13, 2027</b><span>Right before the Microsoft MVP Summit</span></div>
+                    </li>
+                    <li>
+                        <span class="vic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z" opacity="0"/><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                        <div><b>Mild March weather</b><span>Highs around 15°C (59°F) — bring a light rain jacket!</span></div>
+                    </li>
+                </ul>
+                <a class="btn btn-primary" href="https://www.destinationvancouver.com/" target="_blank" rel="noopener">Explore Vancouver</a>
+            </div>
+            <div class="venue-map reveal">
+                <span class="venue-tbc">📍 Venue to be confirmed</span>
+                <iframe
+                    title="Map of downtown Vancouver, BC"
+                    src="https://www.google.com/maps?q=Downtown%20Vancouver%2C%20BC%2C%20Canada&z=12&output=embed"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="wrap">
+            <div class="head center reveal">
+                <p class="eyebrow">Good to know</p>
+                <h2 class="display">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-q">Who should attend CPPS?<span class="plus">+</span></button>
+                    <div class="faq-a"><p>CPPS is ideal for anyone passionate about leveraging the Microsoft Power Platform to drive business transformation and innovation — business analysts, developers, IT professionals, data scientists, and decision-makers across every industry.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What can I expect at CPPS?<span class="plus">+</span></button>
+                    <div class="faq-a"><p>A dynamic mix of insightful sessions, hands-on workshops, and networking opportunities. Learn from expert speakers, gain practical experience with Power Platform tools, and connect with like-minded professionals to exchange ideas and best practices.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Where will CPPS 2027 be held?<span class="plus">+</span></button>
+                    <div class="faq-a"><p>CPPS 2027 will be held in Vancouver, British Columbia — that much is confirmed! We're finalizing the exact downtown venue and will announce it soon. Vancouver is known for its stunning natural scenery, diverse culture, and thriving tech scene.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Why is there a $299 fee for the full-day workshops?<span class="plus">+</span></button>
+                    <div class="faq-a"><p>The $299 fee helps cover the costs of organizing and delivering a high-quality workshop — venue, materials, and logistics. Any revenue beyond those costs goes directly toward an honorarium for the trainers and content creators, recognizing their time, expertise, and effort in developing and delivering the workshop.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the weather like in Vancouver in March?<span class="plus">+</span></button>
+                    <div class="faq-a"><p>In March, Vancouver enjoys mild temperatures, with highs around 15°C (59°F) and cooler evenings. It can be rainy at times, but the temperate climate makes it a lovely destination to visit.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="section cta-band">
+        <div class="wrap">
+            <h2 class="display">Got a story to share, eh?</h2>
+            <p>Be part of the True North Power Platform Experience. The Call for Speakers for CPPS 2027 is open — share your Power Platform story with a community that's ready to be inspired.</p>
+            <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak at CPPS</a>
+                <a class="btn btn-ghost on-dark" href="#about">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site">
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="img/CPPS-Logo-Light.png" alt="Canadian Power Platform Summit" />
+                    <p>
+                        CPPS is a celebration of innovation, collaboration, and all things Power Platform, eh! Join us in
+                        Vancouver, BC for a one-of-a-kind event that brings together Power Platform enthusiasts from
+                        across the country and around the world to connect, learn, and innovate together.
+                    </p>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul class="foot-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#agenda">Agenda</a></li>
+                        <li><a href="#sponsors">Sponsors</a></li>
+                        <li><a href="#venue">Venue</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get in touch</h4>
+                    <ul class="foot-links">
+                        <li><a href="mailto:info@canadianpowerplatformsummit.com">info@canadianpowerplatformsummit.com</a></li>
+                        <li><a href="mailto:sponsors@canadianpowerplatformsummit.com">sponsors@canadianpowerplatformsummit.com</a></li>
+                        <li><a href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak</a></li>
+                    </ul>
+                    <div class="socials">
+                        <a href="https://x.com/canadiansummit" target="_blank" rel="noopener" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93zm-1.29 19.5h2.04L6.48 3.24H4.29l13.32 17.41z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/canadian-power-platform-summit/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 21 11.1 21 14.28V21h-4v-5.95c0-1.42-.02-3.25-1.98-3.25-1.98 0-2.28 1.55-2.28 3.15V21H9z"/></svg></a>
+                        <a href="https://www.youtube.com/@CanadianPowerPlatformSummit" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.4.5A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.5.5-5.5s0-3.6-.5-5.5zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© <span id="year"></span> Canadian Power Platform Summit. A non-profit community event. All rights reserved.</span>
+                <span>The True North Power Platform Experience 🍁</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Sticky nav bg
+        var nav = document.getElementById('nav');
+        function onScroll() { nav.classList.toggle('solid', window.scrollY > 40); }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Mobile menu
+        var toggle = document.getElementById('menuToggle');
+        var links = document.getElementById('navLinks');
+        toggle.addEventListener('click', function () { links.classList.toggle('open'); });
+        links.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { links.classList.remove('open'); }); });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-q').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var item = btn.parentElement;
+                var open = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(function (i) {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-a').style.maxHeight = null;
+                });
+                if (!open) {
+                    item.classList.add('open');
+                    var a = item.querySelector('.faq-a');
+                    a.style.maxHeight = a.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Reveal on scroll
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+        // Count-up stats
+        function runCount(el) {
+            var target = +el.getAttribute('data-count');
+            var dur = 1600, start = performance.now();
+            function frame(now) {
+                var p = Math.min((now - start) / dur, 1);
+                var eased = 1 - Math.pow(1 - p, 3);
+                var val = Math.round(target * eased);
+                el.textContent = val.toLocaleString('en-US');
+                if (p < 1) requestAnimationFrame(frame);
+            }
+            requestAnimationFrame(frame);
+        }
+        var countIO = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { runCount(e.target.querySelector('[data-count]')); countIO.unobserve(e.target); }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.stat').forEach(function (el) { countIO.observe(el); });
+
+        // Lightbox gallery
+        (function () {
+            var grid = document.getElementById('galGrid');
+            if (!grid) return;
+            var items = Array.prototype.slice.call(grid.querySelectorAll('a'));
+            var lb = document.getElementById('lightbox');
+            var lbImg = document.getElementById('lbImg');
+            var lbCap = document.getElementById('lbCap');
+            var lbCount = document.getElementById('lbCount');
+            var i = 0;
+
+            function show(n) {
+                i = (n + items.length) % items.length;
+                var a = items[i];
+                var img = a.querySelector('img');
+                lbImg.classList.remove('ready');
+                var full = new Image();
+                full.onload = function () {
+                    lbImg.src = full.src;
+                    lbImg.alt = img.alt;
+                    lbCap.textContent = img.alt;
+                    lbCount.textContent = (i + 1) + ' / ' + items.length;
+                    requestAnimationFrame(function () { lbImg.classList.add('ready'); });
+                };
+                full.src = a.getAttribute('href');
+                // preload neighbours
+                [items[(i + 1) % items.length], items[(i - 1 + items.length) % items.length]].forEach(function (el) {
+                    var p = new Image(); p.src = el.getAttribute('href');
+                });
+            }
+            function open(n) { show(n); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+            function close() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+
+            items.forEach(function (a, idx) {
+                a.addEventListener('click', function (e) { e.preventDefault(); open(idx); });
+            });
+            document.getElementById('lbClose').addEventListener('click', close);
+            document.getElementById('lbNext').addEventListener('click', function () { show(i + 1); });
+            document.getElementById('lbPrev').addEventListener('click', function () { show(i - 1); });
+            lb.querySelectorAll('[data-close]').forEach(function (el) {
+                el.addEventListener('click', function (e) { if (e.target === el) close(); });
+            });
+            document.addEventListener('keydown', function (e) {
+                if (!lb.classList.contains('open')) return;
+                if (e.key === 'Escape') close();
+                else if (e.key === 'ArrowRight') show(i + 1);
+                else if (e.key === 'ArrowLeft') show(i - 1);
+            });
+            // Swipe on touch
+            var x0 = null;
+            lb.addEventListener('touchstart', function (e) { x0 = e.changedTouches[0].clientX; }, { passive: true });
+            lb.addEventListener('touchend', function (e) {
+                if (x0 === null) return;
+                var dx = e.changedTouches[0].clientX - x0;
+                if (Math.abs(dx) > 45) show(dx < 0 ? i + 1 : i - 1);
+                x0 = null;
+            }, { passive: true });
+        })();
+
+        // Countdown
+        (function () {
+            var target = new Date('2027-03-12T09:00:00-08:00').getTime();
+            var box = document.getElementById('countdown');
+            function tick() {
+                var diff = target - Date.now();
+                if (diff <= 0) {
+                    box.innerHTML = '<div class="cd-live">🍁 The Summit is here — welcome to Vancouver!</div>';
+                    return;
+                }
+                var d = Math.floor(diff / 86400000);
+                var h = Math.floor(diff % 86400000 / 3600000);
+                var m = Math.floor(diff % 3600000 / 60000);
+                var s = Math.floor(diff % 60000 / 1000);
+                var pad = function (n) { return String(n).padStart(2, '0'); };
+                document.getElementById('cd-days').textContent = pad(d);
+                document.getElementById('cd-hours').textContent = pad(h);
+                document.getElementById('cd-mins').textContent = pad(m);
+                document.getElementById('cd-secs').textContent = pad(s);
+                setTimeout(tick, 1000);
+            }
+            tick();
+        })();
+    </script>
+</body>
+</html>
