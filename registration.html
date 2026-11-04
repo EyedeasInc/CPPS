@@ -10,12 +10,12 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
         :root {
             --red: #c93f35; --red-dark: #b0261f; --red-deep: #7c1a15;
             --cream: #f1e1cf; --paper: #fbf6ef; --ink: #16110f; --ink-soft: #3a322d;
-            --line: rgba(22,17,15,.12); --shadow: 0 18px 50px -20px rgba(22,17,15,.35);
+            --line: rgba(22,17,15,.12); --shadow: none;
             --maxw: 1100px; --ease: cubic-bezier(.2,.7,.2,1);
         }
         * { box-sizing: border-box; }
@@ -25,30 +25,29 @@
         img { max-width: 100%; display: block; }
         .display { font-family: 'Anton', sans-serif; text-transform: uppercase; letter-spacing: .01em; font-weight: 400; }
         .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-        .btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 999px; border: 2px solid transparent; transition: transform .25s var(--ease), background .25s; }
-        .btn:hover { transform: translateY(-2px); }
+        .btn { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; padding: 14px 28px; border-radius: 4px; border: 2px solid transparent; transition: transform 160ms var(--ease), background-color .2s, border-color .2s; }
+        .btn:active { transform: scale(.97); }
         .btn-primary { background: var(--red); color: #fff; }
         .btn-primary:hover { background: var(--red-dark); }
         .btn-ghost { color: #fff; border-color: rgba(255,255,255,.45); }
         .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
 
-        header.nav { background: rgba(18,13,11,.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+        header.nav { background: #120d0b; position: sticky; top: 0; z-index: 100; }
         .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 24px; max-width: var(--maxw); margin: 0 auto; }
         .brand { display: flex; align-items: center; gap: 12px; }
         .brand img { height: 48px; width: 48px; }
-        .brand-text b { font-family: 'Barlow Condensed', sans-serif; font-size: 19px; letter-spacing: .04em; text-transform: uppercase; color: #fff; display: block; line-height: 1; }
-        .brand-text span { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--cream); opacity: .8; }
+        .brand-text b { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 19px; letter-spacing: .02em; text-transform: uppercase; color: #fff; display: block; line-height: 1; }
+        .brand-text span { font-size: 13px; color: var(--cream); }
 
         .page-hero { background: var(--red-deep); color: #fff; text-align: center; padding: 64px 0 56px; position: relative; overflow: hidden; }
         
         .page-hero .wrap { position: relative; }
-        .page-hero .kicker { font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; letter-spacing: .24em; font-weight: 600; color: var(--cream); margin-bottom: 12px; }
         .page-hero h1 { font-size: clamp(38px, 6vw, 72px); }
-        .page-hero p { max-width: 56ch; margin: 16px auto 0; opacity: .92; }
+        .page-hero p { max-width: 56ch; margin: 16px auto 0; }
         .page-hero .meta { display: flex; gap: 12px 26px; justify-content: center; flex-wrap: wrap; margin-top: 22px; font-weight: 600; }
 
-        .reg-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 18px; margin: -36px auto 0; position: relative; z-index: 2; max-width: var(--maxw); }
-        .reg-note { text-align: center; color: var(--ink-soft); margin: 8px 0 18px; }
+        .reg-card { background: #fff; border-radius: 18px; padding: 18px; margin: -36px auto 0; position: relative; z-index: 2; max-width: var(--maxw); }
+        .reg-note { text-align: center; color: var(--ink); margin: 8px 0 18px; }
         .reg-note a { color: var(--red); font-weight: 700; }
         iframe#registrationForm { width: 100%; min-height: 900px; border: 0; border-radius: 12px; overflow: hidden; }
 
@@ -56,12 +55,12 @@
         .foot-grid { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; align-items: center; }
         .foot-brand { display: flex; align-items: center; gap: 14px; }
         .foot-brand img { height: 54px; width: 54px; }
-        .foot-brand b { color: #fff; font-family: 'Barlow Condensed', sans-serif; letter-spacing: .06em; text-transform: uppercase; }
+        .foot-brand b { color: #fff; font-family: 'Anton', sans-serif; font-weight: 400; letter-spacing: .02em; text-transform: uppercase; }
         .socials { display: flex; gap: 12px; }
-        .socials a { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,.18); display: grid; place-items: center; transition: .25s var(--ease); }
-        .socials a:hover { background: var(--red); border-color: var(--red); transform: translateY(-3px); }
+        .socials a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.1); display: grid; place-items: center; transition: background-color .2s; }
+        .socials a:hover { background: var(--red); }
         .socials svg { width: 17px; height: 17px; fill: #fff; }
-        .foot-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 30px; padding-top: 20px; font-size: 13px; text-align: center; }
+        .foot-bottom { margin-top: 40px; font-size: 13px; text-align: center; }
         @media (max-width: 560px) { .brand-text { display: none; } }
             a:focus-visible, button:focus-visible { outline: 3px solid var(--cream); outline-offset: 3px; box-shadow: 0 0 0 6px var(--ink); }
         @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .15s !important; animation: none !important; } }
@@ -80,12 +79,11 @@
 
     <section class="page-hero">
         <div class="wrap">
-            <p class="kicker">The True North Power Platform Experience</p>
             <h1 class="display">Register for CPPS 2027</h1>
-            <p>Secure your spot at the Canadian Power Platform Summit — two days of sessions, workshops, and epic networking in beautiful Vancouver.</p>
+            <p>Secure your spot at the Canadian Power Platform Summit: two days of sessions, workshops, and epic networking in beautiful Vancouver.</p>
             <div class="meta">
-                <span>🗓 March 12–13, 2027</span>
-                <span><span aria-hidden="true">📍</span> Vancouver, BC</span>
+                <span>March 12–13, 2027</span>
+                <span>Vancouver, BC</span>
             </div>
         </div>
     </section>
@@ -111,7 +109,7 @@
                     <a href="https://www.youtube.com/@CanadianPowerPlatformSummit" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.4.5A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.5.5-5.5s0-3.6-.5-5.5zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
                 </div>
             </div>
-            <div class="foot-bottom">© <span id="year"></span> Canadian Power Platform Summit · A non-profit community event · The True North Power Platform Experience 🍁</div>
+            <div class="foot-bottom">© <span id="year"></span> Canadian Power Platform Summit · A non-profit community event · The True North Power Platform Experience</div>
         </div>
     </footer>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
