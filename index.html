@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Canadian Power Platform Summit 2027 · March 12–13 · Vancouver</title>
-    <meta name="description" content="The Canadian Power Platform Summit (CPPS) returns March 12–13, 2027 in Vancouver, BC. A celebration of innovation, collaboration, and all things Power Platform — eh! The Call for Speakers is now open." />
-    <meta name="keywords" content="Power Platform, CPPS, Canadian Power Platform Summit, Power Apps, Power Automate, Copilot Studio, Dataverse, Vancouver, Microsoft, conference 2027, Call for Speakers" />
+    <meta name="description" content="The Canadian Power Platform Summit (CPPS) returns March 12–13, 2027 in Vancouver, BC. A celebration of innovation, collaboration, and all things Power Platform — eh!" />
+    <meta name="keywords" content="Power Platform, CPPS, Canadian Power Platform Summit, Power Apps, Power Automate, Copilot Studio, Dataverse, Vancouver, Microsoft, conference 2027" />
     <meta name="author" content="Canadian Power Platform Summit" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="theme-color" content="#d64a3f" />
@@ -17,7 +17,7 @@
     <meta property="og:locale" content="en_CA" />
     <meta property="og:url" content="https://canadianpowerplatformsummit.com/" />
     <meta property="og:title" content="Canadian Power Platform Summit 2027 · March 12–13 · Vancouver" />
-    <meta property="og:description" content="The True North Power Platform Experience returns March 12–13, 2027 in Vancouver, BC. The Call for Speakers is now open, eh!" />
+    <meta property="og:description" content="The True North Power Platform Experience returns March 12–13, 2027 in Vancouver, BC. First speakers are being announced now, eh!" />
     <meta property="og:image" content="https://canadianpowerplatformsummit.com/img/og-image.jpg" />
     <meta property="og:image:secure_url" content="https://canadianpowerplatformsummit.com/img/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -30,7 +30,7 @@
     <meta name="twitter:site" content="@canadiansummit" />
     <meta name="twitter:creator" content="@canadiansummit" />
     <meta name="twitter:title" content="Canadian Power Platform Summit 2027 · March 12–13 · Vancouver" />
-    <meta name="twitter:description" content="The True North Power Platform Experience returns March 12–13, 2027 in Vancouver, BC. The Call for Speakers is now open, eh!" />
+    <meta name="twitter:description" content="The True North Power Platform Experience returns March 12–13, 2027 in Vancouver, BC. First speakers are being announced now, eh!" />
     <meta name="twitter:image" content="https://canadianpowerplatformsummit.com/img/og-image.jpg" />
     <meta name="twitter:image:alt" content="Attendees at the Canadian Power Platform Summit in Vancouver" />
 
@@ -70,14 +70,6 @@
           "https://www.linkedin.com/company/canadian-power-platform-summit/",
           "https://www.youtube.com/@CanadianPowerPlatformSummit"
         ]
-      },
-      "offers": {
-        "@type": "Offer",
-        "name": "Call for Speakers",
-        "url": "https://sessionize.com/cpps2027",
-        "availability": "https://schema.org/InStock",
-        "price": "0",
-        "priceCurrency": "CAD"
       }
     }
     </script>
@@ -309,7 +301,8 @@
             text-transform: uppercase; letter-spacing: .02em; font-size: 22px;
         }
         .marquee-track span { display: inline-flex; align-items: center; }
-        @media (max-width: 760px) { .marquee-track { font-size: 18px; gap: 6px 24px; } }
+        @media (max-width: 760px) {
+            .tier-platinum .logo-slot { min-width: 0; width: 100%; max-width: 380px; } .marquee-track { font-size: 18px; gap: 6px 24px; } }
         .marquee-track .dup { display: none; }
         @keyframes scroll { to { transform: translateX(-50%); } }
 
@@ -438,14 +431,16 @@
             display: grid; place-items: center; padding: 20px 28px;
         }
                 .logo-slot img { max-height: 100%; object-fit: contain; }
-        .tier-platinum .logo-slot { height: 130px; min-width: 300px; }
-        .tier-platinum .logo-slot img { max-height: 70px; }
+        .tier-platinum .logo-slot { height: 150px; min-width: 380px; }
+        .tier-platinum .logo-slot img { max-height: 84px; max-width: 340px; }
         .tier-gold .logo-slot { height: 110px; min-width: 240px; }
         .tier-gold .logo-slot img { max-height: 58px; }
+        .logo-slot.is-square img { max-height: 92px; }
+        .tier-gold .logo-slot.is-square { height: 124px; }
         .tier-silver .logo-slot { height: 96px; min-width: 200px; }
         .tier-silver .logo-slot img { max-height: 48px; }
         .tier-community .logo-slot { height: 82px; min-width: 160px; }
-        .tier-community .logo-slot img { max-height: 42px; }
+        .tier-community .logo-slot img { max-height: 42px; max-width: 170px; }
         .sponsor-cta { text-align: center; margin-top: 24px; }
         .sponsor-panel {
             text-align: center; max-width: 780px; margin: 0 auto; padding: 60px 32px;
@@ -588,7 +583,7 @@
     <!-- Announcement -->
     <div class="announce">
         <strong>CPPS 2027</strong> · March 12–13, 2027 · Vancouver, BC · The two days before the Microsoft MVP Summit.
-        <a href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to speak →</a>
+        <a href="#sponsors">Become a sponsor →</a>
     </div>
 
     <!-- Nav -->
@@ -611,7 +606,7 @@
                 <a href="#faq">FAQ</a>
             </nav>
             <div class="nav-cta">
-                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak</a>
+                <a class="btn btn-primary" href="#sponsors">Become a Sponsor</a>
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
             </div>
         </div>
@@ -644,7 +639,7 @@
             </p>
 
             <div class="hero-actions">
-                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak at CPPS</a>
+                <a class="btn btn-primary" href="#sponsors">Become a Sponsor</a>
                 <a class="btn btn-ghost on-dark" href="#agenda">Explore the Agenda</a>
             </div>
 
@@ -707,7 +702,6 @@
                     the two days before the Microsoft MVP Summit, we're welcoming top-notch international speakers for another
                     unforgettable experience in beautiful Vancouver.
                 </p>
-                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener" style="margin-top:12px;">Apply to Speak at CPPS</a>
             </div>
         </div>
     </section>
@@ -754,10 +748,7 @@
             </div>
             <div class="agenda-frame agenda-tba reveal">
                 <h3 class="display">To Be Announced</h3>
-                <p>The CPPS 2027 session and workshop lineup will be published closer to the event. Want to be on stage? The Call for Speakers is open now.</p>
-            </div>
-            <div class="agenda-cta">
-                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak at CPPS</a>
+                <p>The CPPS 2027 session and workshop lineup will be published closer to the event. The Call for Speakers is now closed, and the first round of speakers is being notified.</p>
             </div>
         </div>
     </section>
@@ -817,8 +808,27 @@
                 <p>Sponsorship is open. Put your brand in front of Canada's most engaged Power Platform community.</p>
             </div>
 
+            <div class="tier tier-platinum reveal">
+                <div class="tier-label">Platinum</div>
+                <div class="logos">
+                    <div class="logo-slot"><img src="img/sponsors/mscrm-addons.png" alt="mscrm-addons.com" loading="lazy" /></div>
+                </div>
+            </div>
+            <div class="tier tier-gold reveal">
+                <div class="tier-label">Gold</div>
+                <div class="logos">
+                    <div class="logo-slot is-square"><img src="img/sponsors/the-mentoring-hub.png" alt="The Mentoring Hub" loading="lazy" /></div>
+                </div>
+            </div>
+            <div class="tier tier-community reveal">
+                <div class="tier-label">Community</div>
+                <div class="logos">
+                    <div class="logo-slot"><img src="img/sponsors/Endeavor4.png" alt="Endeavor 4" loading="lazy" /></div>
+                </div>
+            </div>
+
             <div class="sponsor-panel reveal">
-                <p>From community supporter to headline partner, there's a package to fit your goals. Reach out for the prospectus and available tiers.</p>
+                <p>From community supporter to headline partner, there's a package to fit your goals. Join them: reach out for the prospectus and available tiers.</p>
                 <a class="btn btn-primary" href="mailto:sponsors@canadianpowerplatformsummit.com?subject=CPPS%202027%20Sponsorship">sponsors@canadianpowerplatformsummit.com</a>
             </div>
         </div>
@@ -894,10 +904,10 @@
     <!-- CTA band -->
     <section class="section cta-band">
         <div class="wrap">
-            <h2 class="display">Got a story to share, eh?</h2>
-            <p>Be part of the True North Power Platform Experience. The Call for Speakers for CPPS 2027 is open. Share your Power Platform story with a community that's ready to be inspired.</p>
+            <h2 class="display">Put your brand in the room, eh?</h2>
+            <p>Be part of the True North Power Platform Experience. Sponsorship for CPPS 2027 is open, with packages for user groups, consultancies and product companies.</p>
             <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-                <a class="btn btn-primary" href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak at CPPS</a>
+                <a class="btn btn-primary" href="mailto:sponsors@canadianpowerplatformsummit.com?subject=CPPS%202027%20Sponsorship">Talk to us about sponsoring</a>
                 <a class="btn btn-ghost on-dark" href="#about">Read about CPPS</a>
             </div>
         </div>
@@ -931,7 +941,6 @@
                     <ul class="foot-links">
                         <li><a href="mailto:info@canadianpowerplatformsummit.com">info@canadianpowerplatformsummit.com</a></li>
                         <li><a href="mailto:sponsors@canadianpowerplatformsummit.com">sponsors@canadianpowerplatformsummit.com</a></li>
-                        <li><a href="https://sessionize.com/cpps2027" target="_blank" rel="noopener">Apply to Speak</a></li>
                     </ul>
                     <div class="socials">
                         <a href="https://x.com/canadiansummit" target="_blank" rel="noopener" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.6l5.24 6.93 6.06-6.93zm-1.29 19.5h2.04L6.48 3.24H4.29l13.32 17.41z"/></svg></a>
