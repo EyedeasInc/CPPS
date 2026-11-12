@@ -302,7 +302,7 @@
         }
         .marquee-track span { display: inline-flex; align-items: center; }
         @media (max-width: 760px) {
-            .tier-platinum .logo-slot { min-width: 0; width: 100%; max-width: 380px; } .marquee-track { font-size: 18px; gap: 6px 24px; } }
+            .marquee-track { font-size: 18px; gap: 6px 24px; } }
         .marquee-track .dup { display: none; }
         @keyframes scroll { to { transform: translateX(-50%); } }
 
@@ -418,42 +418,57 @@
         }
 
         /* ---------- Sponsors ---------- */
-        .tier { margin-bottom: 46px; text-align: center; }
-        .tier-label {
-            font-weight: 700; font-size: 18px;
-            color: var(--ink-soft); margin-bottom: 22px;
-            display: inline-flex; align-items: center; gap: 14px;
+        .sp-head { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: end; margin-bottom: 56px; }
+        .sp-head h2 { font-size: clamp(44px, 6vw, 76px); line-height: 1; }
+        .sp-head p { font-size: 18px; color: var(--ink-soft); max-width: 46ch; }
+        .sp-tier { display: grid; grid-template-columns: 240px 1fr; gap: 40px; padding: 36px 0; border-top: 2px solid var(--ink); }
+        .sp-comm { border-bottom: 2px solid var(--ink); }
+        .sp-name h3 { font-size: 34px; line-height: 1; }
+        .sp-name p { font-size: 14px; color: var(--ink-soft); margin-top: 10px; max-width: 22ch; }
+        .sp-plat .sp-name h3 { color: var(--red); font-size: 44px; }
+        .sp-logos { display: grid; gap: 18px; }
+        .sp-plat .sp-logos { grid-template-columns: 1fr; }
+        .sp-gold .sp-logos { grid-template-columns: repeat(2, 1fr); }
+        .sp-comm .sp-logos { grid-template-columns: repeat(3, 1fr); }
+        .sp-logo {
+            background: #fff; border-radius: 6px;
+            display: grid; place-items: center; padding: 22px 28px; height: 120px;
+            transition: transform .25s var(--ease);
         }
-        .tier-label::before, .tier-label::after { content: ""; width: 40px; height: 2px; background: var(--red); opacity: .5; }
-        .logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 22px; }
-        .logo-slot {
-            background: #fff; border-radius: 4px;
-            display: grid; place-items: center; padding: 20px 28px;
+        .sp-logo img { max-width: 100%; max-height: 52px; object-fit: contain; }
+        .sp-plat .sp-logo { height: 220px; grid-template-columns: 1fr auto; gap: 40px; padding: 32px 48px; justify-items: start; }
+        .sp-plat .sp-logo img { max-height: 96px; max-width: 460px; }
+        .sp-plat .sp-since { font-family: Anton, sans-serif; font-size: 22px; text-transform: uppercase; letter-spacing: .02em; color: var(--ink); text-align: right; line-height: 1.2; }
+        .sp-plat .sp-since span { display: block; font-family: Inter, sans-serif; font-size: 14px; text-transform: none; letter-spacing: 0; color: var(--ink-soft); margin-top: 6px; }
+        .sp-gold .sp-logo { height: 160px; }
+        .sp-gold .sp-logo img { max-height: 64px; }
+        .sp-logo.is-square img { max-height: 112px; }
+        .sp-open {
+            background: var(--cream); border-radius: 6px; color: var(--red-deep);
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            padding: 18px; font-weight: 600; font-size: 15px; text-decoration: none;
+            transition: background .25s var(--ease), color .25s var(--ease);
         }
-                .logo-slot img { max-height: 100%; object-fit: contain; }
-        .tier-platinum .logo-slot { height: 150px; min-width: 380px; }
-        .tier-platinum .logo-slot img { max-height: 84px; max-width: 340px; }
-        .tier-gold .logo-slot { height: 110px; min-width: 240px; }
-        .tier-gold .logo-slot img { max-height: 58px; }
-        .logo-slot.is-square img { max-height: 92px; }
-        .tier-gold .logo-slot.is-square { height: 124px; }
-        .tier-silver .logo-slot { height: 96px; min-width: 200px; }
-        .tier-silver .logo-slot img { max-height: 48px; }
-        .tier-community .logo-slot { height: 82px; min-width: 160px; }
-        .tier-community .logo-slot img { max-height: 42px; max-width: 170px; }
-        .sponsor-cta { text-align: center; margin-top: 24px; }
-        .sponsor-panel {
-            text-align: center; max-width: 780px; margin: 0 auto; padding: 60px 32px;
-            background: var(--cream); border-radius: var(--radius);
+        .sp-open b { font-family: Anton, sans-serif; font-weight: 400; font-size: 24px; text-transform: uppercase; color: var(--red); }
+        @media (hover: hover) {
+            .sp-logo:hover { transform: translateY(-2px); }
+            .sp-open:hover { background: var(--red); color: #fff; }
+            .sp-open:hover b { color: #fff; }
         }
-        .sponsor-panel .tba-badge {
-            display: inline-block; background: var(--red); color: #fff; font-weight: 700;
-            font-size: 13px; letter-spacing: .04em; padding: 7px 16px; border-radius: 999px; margin-bottom: 20px;
+        .sp-foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 40px; }
+        .sp-foot p { font-size: 16px; color: var(--ink-soft); max-width: 56ch; }
+        @media (max-width: 860px) {
+            .sp-head { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+            .sp-tier { grid-template-columns: 1fr; gap: 20px; padding: 28px 0; }
+            .sp-plat .sp-logo { grid-template-columns: 1fr; height: auto; justify-items: center; padding: 32px 24px; gap: 18px; }
+            .sp-plat .sp-logo img { max-width: 100%; }
+            .sp-plat .sp-logo > * { min-width: 0; }
+            .sp-plat .sp-since { text-align: center; }
+            .sp-comm .sp-logos { grid-template-columns: repeat(2, 1fr); }
         }
-        .sponsor-panel h3 { font-size: clamp(28px, 4.4vw, 46px); color: var(--red-deep); margin-bottom: 14px; }
-        .sponsor-panel > p { color: var(--ink); max-width: 52ch; margin: 0 auto 26px; font-size: 16px; }
-        .sponsor-panel .btn { font-size: 16px; }
-        .sponsor-fineprint { font-size: 14px; color: var(--ink-soft); margin: 20px 0 0; }
+        @media (max-width: 480px) {
+            .sp-gold .sp-logos, .sp-comm .sp-logos { grid-template-columns: 1fr; }
+        }
 
         /* ---------- Venue ---------- */
         .venue { background: var(--cream); }
@@ -570,6 +585,20 @@
         @media (max-width: 520px) {
             .brand-text { display: none; }
             .nav-cta .btn { padding: 12px 20px; }
+        }
+        @media (max-width: 600px) {
+            .nav-cta .btn { display: none; }
+            .hero-actions { flex-direction: column; }
+            .hero-actions .btn { width: 100%; justify-content: center; text-align: center; }
+            .about-tag { left: 16px; bottom: -18px; }
+            .announce a { display: inline-block; padding: 8px 4px; margin: -8px 0; }
+            .foot-links a { display: inline-block; padding: 10px 0; }
+            .foot-links { gap: 0; }
+            .venue-map iframe { height: 300px; }
+            .sp-open { min-height: 96px; }
+            .foot-links a { overflow-wrap: anywhere; }
+            .countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+            .cd-box { min-width: 0; }
         }
         @media (max-width: 460px) {
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -803,33 +832,39 @@
     <!-- Sponsors -->
     <section class="section" id="sponsors">
         <div class="wrap">
-            <div class="head center reveal">
-                <h2 class="display">Sponsor CPPS 2027</h2>
-                <p>Sponsorship is open. Put your brand in front of Canada's most engaged Power Platform community.</p>
+            <div class="sp-head reveal">
+                <h2 class="display">The partners behind CPPS 2027</h2>
+                <p>Community-run and sponsor-backed. These teams make the summit possible, and there's still room for yours.</p>
             </div>
 
-            <div class="tier tier-platinum reveal">
-                <div class="tier-label">Platinum</div>
-                <div class="logos">
-                    <div class="logo-slot"><img src="img/sponsors/mscrm-addons.png" alt="mscrm-addons.com" loading="lazy" /></div>
-                </div>
-            </div>
-            <div class="tier tier-gold reveal">
-                <div class="tier-label">Gold</div>
-                <div class="logos">
-                    <div class="logo-slot is-square"><img src="img/sponsors/the-mentoring-hub.png" alt="The Mentoring Hub" loading="lazy" /></div>
-                </div>
-            </div>
-            <div class="tier tier-community reveal">
-                <div class="tier-label">Community</div>
-                <div class="logos">
-                    <div class="logo-slot"><img src="img/sponsors/Endeavor4.png" alt="Endeavor 4" loading="lazy" /></div>
+            <div class="sp-tier sp-plat reveal">
+                <div class="sp-name"><h3 class="display">Platinum</h3><p>Headline partner of the summit.</p></div>
+                <div class="sp-logos">
+                    <div class="sp-logo"><img src="img/sponsors/mscrm-addons.png" alt="mscrm-addons.com" loading="lazy" />
+                        <div class="sp-since">Platinum partner<span>CPPS 2025, 2026 and 2027</span></div></div>
                 </div>
             </div>
 
-            <div class="sponsor-panel reveal">
-                <p>From community supporter to headline partner, there's a package to fit your goals. Join them: reach out for the prospectus and available tiers.</p>
-                <a class="btn btn-primary" href="mailto:sponsors@canadianpowerplatformsummit.com?subject=CPPS%202027%20Sponsorship">sponsors@canadianpowerplatformsummit.com</a>
+            <div class="sp-tier sp-gold reveal">
+                <div class="sp-name"><h3 class="display">Gold</h3><p>Sponsor table, session and video spot.</p></div>
+                <div class="sp-logos">
+                    <div class="sp-logo is-square"><img src="img/sponsors/the-mentoring-hub.png" alt="The Mentoring Hub" loading="lazy" /></div>
+                    <a class="sp-open" href="mailto:sponsors@canadianpowerplatformsummit.com?subject=CPPS%202027%20Gold%20Sponsorship"><b>Your logo here</b>Gold sponsorship is open</a>
+                </div>
+            </div>
+
+            <div class="sp-tier sp-comm reveal">
+                <div class="sp-name"><h3 class="display">Community</h3><p>User groups, small companies and consultants.</p></div>
+                <div class="sp-logos">
+                    <div class="sp-logo"><img src="img/sponsors/Endeavor4.png" alt="Endeavor 4" loading="lazy" /></div>
+                    <div class="sp-logo"><img src="img/sponsors/hero-labs.png" alt="Hero Labs" loading="lazy" /></div>
+                    <a class="sp-open" href="mailto:sponsors@canadianpowerplatformsummit.com?subject=CPPS%202027%20Community%20Sponsorship"><b>Join them</b>Community sponsorship is open</a>
+                </div>
+            </div>
+
+            <div class="sp-foot reveal">
+                <p>Silver and Gold packages are still available, from shared tables to session slots. Ask us for the prospectus.</p>
+                <a class="btn btn-primary" href="mailto:sponsors@canadianpowerplatformsummit.com?subject=CPPS%202027%20Sponsorship">Get the sponsor prospectus</a>
             </div>
         </div>
     </section>
