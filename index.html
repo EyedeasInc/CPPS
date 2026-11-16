@@ -437,6 +437,10 @@
             transition: transform .25s var(--ease);
         }
         .sp-logo img { max-width: 100%; max-height: 52px; object-fit: contain; }
+        a.sp-logo { color: inherit; text-decoration: none; transition: transform .2s var(--ease); }
+        a.sp-logo:active { transform: scale(.98); }
+        @media (hover: hover) { a.sp-logo:hover { transform: translateY(-3px); } }
+        a.sp-logo:focus-visible { outline: 3px solid var(--red, #d64a3f); outline-offset: 3px; }
         .sp-plat .sp-logo { height: 220px; grid-template-columns: 1fr auto; gap: 40px; padding: 32px 48px; justify-items: start; }
         .sp-plat .sp-logo img { max-height: 96px; max-width: 460px; }
         .sp-plat .sp-since { font-family: Anton, sans-serif; font-size: 22px; text-transform: uppercase; letter-spacing: .02em; color: var(--ink); text-align: right; line-height: 1.2; }
@@ -841,8 +845,8 @@
             <div class="sp-tier sp-plat reveal">
                 <div class="sp-name"><h3 class="display">Platinum</h3><p>Headline partner of the summit.</p></div>
                 <div class="sp-logos">
-                    <div class="sp-logo"><img src="img/sponsors/mscrm-addons.png" alt="mscrm-addons.com" loading="lazy" />
-                        <div class="sp-since">Platinum partner<span>CPPS 2025, 2026 and 2027</span></div></div>
+                    <a class="sp-logo" href="https://www.mscrm-addons.com" target="_blank" rel="noopener" aria-label="mscrm-addons.com (opens in a new tab)"><img src="img/sponsors/mscrm-addons.png" alt="mscrm-addons.com" loading="lazy" />
+                        <div class="sp-since">Platinum partner<span>CPPS 2025, 2026 and 2027</span></div></a>
                 </div>
             </div>
 
@@ -857,8 +861,8 @@
             <div class="sp-tier sp-comm reveal">
                 <div class="sp-name"><h3 class="display">Community</h3><p>User groups, small companies and consultants.</p></div>
                 <div class="sp-logos">
-                    <div class="sp-logo"><img src="img/sponsors/Endeavor4.png" alt="Endeavor 4" loading="lazy" /></div>
-                    <div class="sp-logo"><img src="img/sponsors/hero-labs.png" alt="Hero Labs" loading="lazy" /></div>
+                    <a class="sp-logo" href="https://www.endeavor4solutions.com/" target="_blank" rel="noopener" aria-label="Endeavor 4 (opens in a new tab)"><img src="img/sponsors/Endeavor4.png" alt="Endeavor 4" loading="lazy" /></a>
+                    <a class="sp-logo" href="https://labs.fromzerotoheroes.com/" target="_blank" rel="noopener" aria-label="Hero Labs (opens in a new tab)"><img src="img/sponsors/hero-labs.png" alt="Hero Labs" loading="lazy" /></a>
                     <a class="sp-open" href="mailto:sponsors@canadianpowerplatformsummit.com?subject=CPPS%202027%20Community%20Sponsorship"><b>Join them</b>Community sponsorship is open</a>
                 </div>
             </div>
