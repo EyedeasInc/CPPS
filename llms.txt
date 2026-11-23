@@ -1,13 +1,13 @@
 # Canadian Power Platform Summit 2027 (CPPS)
 
-> CPPS is a non-profit, community-run conference celebrating innovation, collaboration, and all things Microsoft Power Platform — "The True North Power Platform Experience." The 2027 edition returns to Vancouver, BC on March 12–13, 2027, right before the Microsoft MVP Summit. The Call for Speakers is closed; the first round of speakers is being announced.
+> CPPS is a non-profit, community-run conference celebrating innovation, collaboration, and all things Microsoft Power Platform — "The True North Power Platform Experience." The 2027 edition returns to Vancouver, BC on March 13, 2027, right before the Microsoft MVP Summit. The Call for Speakers is closed; the first round of speakers is being announced.
 
 ## Event details
 
 - Name: Canadian Power Platform Summit 2027 (CPPS 2027)
-- Dates: March 12–13, 2027
+- Dates: March 13, 2027
 - Location: Vancouver, British Columbia, Canada (city confirmed; exact downtown venue to be announced)
-- Format: In-person, two days of expert-led sessions and hands-on workshops
+- Format: In-person, a full day of expert-led sessions and networking
 - Organizer: Canadian Power Platform Summit (non-profit)
 - Topics: Power Apps, Power Automate, Copilot Studio, Dataverse, Power BI, Power Pages, AI & agents
 
@@ -29,4 +29,3 @@
 
 - The agenda for 2027 is "To Be Announced" and will be published closer to the event.
 - The venue is confirmed to be in Vancouver, BC; the specific building is still being finalized.
-- Full-day workshops carry a $299 fee; the honorarium supports trainers.
