@@ -6,7 +6,7 @@
 
 - Name: Canadian Power Platform Summit 2027 (CPPS 2027)
 - Dates: March 13, 2027
-- Location: Vancouver, British Columbia, Canada (city confirmed; exact downtown venue to be announced)
+- Venue: Microsoft Vancouver, 1090 W Pender St, Vancouver, BC V6E 0E3, Canada
 - Format: In-person, a full day of expert-led sessions and networking
 - Organizer: Canadian Power Platform Summit (non-profit)
 - Topics: Power Apps, Power Automate, Copilot Studio, Dataverse, Power BI, Power Pages, AI & agents
@@ -28,4 +28,4 @@
 - The Call for Speakers is closed and attendee registration is not open yet.
 
 - The agenda for 2027 is "To Be Announced" and will be published closer to the event.
-- The venue is confirmed to be in Vancouver, BC; the specific building is still being finalized.
+- The venue is confirmed: Microsoft Vancouver, 1090 W Pender St, Vancouver, BC V6E 0E3.
