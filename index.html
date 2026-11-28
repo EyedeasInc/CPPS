@@ -346,7 +346,8 @@
         .card p { color: var(--ink); font-size: 16px; margin: 0; max-width: 52ch; }
 
         /* ---------- Agenda ---------- */
-        .agenda-frame { background: var(--cream); border-radius: var(--radius); padding: 22px; overflow-x: auto; }
+        #agenda { background: #f4ddd3; }
+        .agenda-frame { background: var(--paper); border-radius: var(--radius); padding: 22px; overflow-x: auto; }
         .agenda-tba {
             text-align: center; padding: 72px 28px;
         }
@@ -603,6 +604,49 @@
             .cards { grid-template-columns: 1fr; }
             .cd-box { min-width: 66px; }
         }
+
+        /* Speakers wall (Sessionize vanilla embed) */
+        .speakers .sz-spinner { width: 40px; height: 40px; margin: 80px auto; background: var(--red) !important; border-radius: 50%; }
+        .speakers .sz-root, .speakers .sessionize-wrapper { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); }
+        .speakers .sz-speakers--wall { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 40px 24px; }
+        .speakers .sz-speaker { text-align: center; }
+        .speakers .sz-speaker__photo a { display: block; width: 168px; height: 168px; margin: 0 auto; border-radius: 50%; border: 5px solid var(--red); overflow: hidden; background: var(--cream); transition: transform .35s var(--ease), border-color .35s var(--ease); }
+        .speakers .sz-speaker__photo img { width: 100%; height: 100%; object-fit: cover; }
+        .speakers .sz-speaker__photo a:hover, .speakers .sz-speaker__photo a:focus-visible { transform: translateY(-4px); border-color: var(--red-dark); }
+        .speakers .sz-speaker__name { font-family: 'Anton', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .01em; font-size: 22px; line-height: 1.1; margin-top: 18px; }
+        .speakers .sz-speaker__name a:hover { color: var(--red); }
+        .speakers .sz-speaker__tagline { font-size: 14px; font-weight: 500; line-height: 1.45; color: var(--ink-soft); margin-top: 8px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .sz-modal-container.is-hidden { display: none; }
+        .sz-modal-container { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; }
+        .sz-modal-overlay { position: fixed; inset: 0; background: rgba(22, 17, 15, .72); }
+        .sz-modal-overlay .sz-spinner { width: 40px; height: 40px; margin: 45vh auto 0; background: var(--red); border-radius: 50%; }
+        .sz-modal-container-inner { position: relative; width: 100%; max-width: 680px; max-height: calc(100vh - 48px); overflow-y: auto; background: var(--paper); border-radius: var(--radius); border-top: 10px solid var(--red); }
+        .sz-modal { position: relative; padding: 44px 40px 40px; font-family: 'Inter', system-ui, sans-serif; color: var(--ink); }
+        .sz-modal .sz-speaker--full { text-align: center; }
+        .sz-modal .sz-speaker--full .sz-speaker__photo img { margin: 0 auto; width: 140px; height: 140px; border-radius: 50%; border: 5px solid var(--red); object-fit: cover; }
+        .sz-modal .sz-speaker__name { font-family: 'Anton', sans-serif; font-weight: 400; text-transform: uppercase; font-size: 36px; line-height: 1.05; margin-top: 22px; }
+        .sz-modal .sz-speaker__tagline { font-size: 16px; font-weight: 600; color: var(--red); margin-top: 8px; line-height: 1.4; }
+        .sz-modal .sz-speaker__bio, .sz-modal .sz-session__description { font-size: 16px; line-height: 1.65; margin-top: 18px; }
+        .sz-modal .sz-speaker__sessions { list-style: none; padding: 18px 0 0; margin: 22px 0 0; border-top: 1px solid var(--line); }
+        .sz-modal .sz-speaker__sessions li + li { margin-top: 8px; }
+        .sz-modal .sz-speaker__sessions a, .sz-modal .sz-session__speakers a { font-weight: 700; color: var(--ink); border-bottom: 2px solid var(--red); }
+        .sz-modal .sz-speaker__sessions a:hover { color: var(--red); }
+        .sz-modal .sz-session__title { font-family: 'Anton', sans-serif; font-weight: 400; text-transform: uppercase; font-size: 32px; line-height: 1.05; }
+        .sz-modal .sz-session--full { display: flex; flex-direction: column; }
+        .sz-modal .sz-session__title { order: 1; padding-right: 40px; }
+        .sz-modal .sz-session__speakers { order: 2; list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+        .sz-modal .sz-session__time, .sz-modal .sz-session__room { order: 3; font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+        .sz-modal .sz-session__time:empty, .sz-modal .sz-session__room:empty { display: none; }
+        .sz-modal .sz-session__description { order: 4; white-space: pre-line; }
+        .sz-modal__close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: 16px; cursor: pointer; }
+        .sz-modal__close:hover { background: var(--red); }
+        @media (max-width: 560px) {
+            .speakers .sz-speakers--wall { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; }
+            .speakers .sz-speaker__photo a { width: 128px; height: 128px; border-width: 4px; }
+            .speakers .sz-speaker__name { font-size: 18px; }
+            .sz-modal { padding: 40px 22px 28px; }
+            .sz-modal .sz-speaker__name { font-size: 28px; }
+        }
     </style>
 </head>
 <body>
@@ -626,6 +670,7 @@
             <nav class="nav-links" id="navLinks">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
+                <a href="#speakers">Speakers</a>
                 <a href="#agenda">Agenda</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#sponsors">Sponsors</a>
@@ -762,6 +807,17 @@
                 </div>
             </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Speakers -->
+    <section class="section speakers" id="speakers">
+        <div class="wrap">
+            <div class="head center reveal">
+                <h2 class="display">Meet the Speakers</h2>
+                <p>MVPs, architects and practitioners from around the world, in Vancouver for one day. Select a speaker to read their bio and session.</p>
+            </div>
+            <script type="text/javascript" src="https://sessionize.com/api/v2/15e2pkjg/view/SpeakerWall"></script>
         </div>
     </section>
 
